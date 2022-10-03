@@ -54,15 +54,15 @@ key /etc/openvpn/server/server.key
 dh /etc/openvpn/server/dh.pem
 server 10.8.0.0 255.255.255.0
 ifconfig-pool-persist ipp.txt
-push "route 10.10.10.0 255.255.255.0"
-push "redirect-gateway def1 bypass-dhcp"
-push "dhcp-option DNS 8.8.8.8"
-push "dhcp-option DNS 8.8.4.4"
-push "dhcp-option DNS 1.1.1.1"
+push \"route 10.10.10.0 255.255.255.0\"
+push \"redirect-gateway def1 bypass-dhcp\"
+push \"dhcp-option DNS 8.8.8.8\"
+push \"dhcp-option DNS 8.8.4.4\"
+push \"dhcp-option DNS 1.1.1.1\"
 keepalive 10 120
 tls-auth /etc/openvpn/server/ta.key 0
 cipher AES-256-CBC
-push "compress lz4-v2"
+push \"compress lz4-v2\"
 user nobody
 group nobody
 persist-key
@@ -104,7 +104,7 @@ WantedBy=multi-user.target
 
 ## 启动openvpn 
 systemctl start openvpn
-sysemctl enable openvpn
+systemctl enable openvpn
 
 
 ##配置防火墙
@@ -114,4 +114,5 @@ iptables-save > /etc/sysconfig/iptables
 iptables -L -n -t nat
 
 iptables -t nat -A POSTROUTING -s 10.10.10.0/24 -o eth0 -j MASQUERADE
+
 
