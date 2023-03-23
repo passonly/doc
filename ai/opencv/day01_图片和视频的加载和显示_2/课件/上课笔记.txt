@@ -1,0 +1,18 @@
+许可
+OpenCV
+深度学习
+培养编程思维. 
+培养分析问题, 解决问题的能力. 
+
+电脑上常用的python环境:
+1. anaconda, 它是一个独立的环境. 给小白用的. 
+	Anaconda Prompt --> 进入叫base的虚拟环境, 然后使用pip安装. 
+2. 单独安装的python环境. 
+	什么是虚拟环境: 可以理解为Python环境的一个镜像. 
+	做什么任务, 甚至每个项目都可以单独建一个虚拟环境. 
+	如果想在创建虚拟环境, 需要在电脑的python环境中安装virtualenv包. 
+	国内源建议记几个. 
+	豆瓣源: https://pypi.douban.com/simple
+	清华源: https://pypi.tuna.tsinghua.edu.cn/simple
+	建议: 不要在中文路径下创建虚拟环境. 
+	
